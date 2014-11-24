@@ -6,9 +6,13 @@
 	font-family: Lato;
 	display: inline-block;
 	margin-right: 125px;
+	cursor: default;
 }
-#nonLogo-Navbar {
-	font-weight: 200;
+.nonLogo-Navbar_Content {
+	transition: color 0.35s;
+}
+.nonLogo-Navbar_Content:hover {
+	color: chocolate;
 }
 
 /*.dropDown_Header {
