@@ -1,0 +1,16 @@
+#siteLogo {
+	font-size: 2.25em;
+	margin-top: 1.8em;
+}
+.navBar_Content {
+	font-family: Lato;
+	display: inline-block;
+	margin-right: 125px;
+}
+#nonLogo-Navbar {
+	font-weight: 200;
+}
+
+/*.dropDown_Header {
+	list-style-type: none;
+}*/
