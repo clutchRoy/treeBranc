@@ -5,6 +5,8 @@ body {
 #siteLogo {
 	font-size: 2.25em;
 	margin-left: 125px;
+	color: -webkit-linear-gradient(black, yellow);
+	color: linear-gradient(black, yellow);
 }
 a {
 	text-decoration: none;
