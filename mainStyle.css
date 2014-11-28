@@ -100,4 +100,6 @@ a {
 .navBarMock {
 	margin-top: 0px;
 	margin-bottom: 0px;
-}*/
+}
+The commented code above refers to the building of a navigation bar that scrolls down with the page; it would do so using the jQuery slideToggle() method
+*/
