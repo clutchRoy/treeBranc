@@ -1,6 +1,13 @@
+body {
+	/*background: lightgreen;*/
+	background: orange;
+}
 #siteLogo {
 	font-size: 2.25em;
-	margin-top: 1.8em;
+	margin-left: 125px;
+}
+a {
+	text-decoration: none;
 }
 .navBar_Content {
 	font-family: Lato;
@@ -17,13 +24,45 @@
 /*.dropDown_Header {
 	list-style-type: none;
 }*/
-#mockNavbar_whenScrolled {
-	background: ;
+.navBar {
+	position: fixed;
+	top: 0;
+	background: RGBA(255,255,255,0.75);
+	width: 100%;
+	left: 0;
 }
 #contentSlider {
-	height: ;
+	height: 450px;
+	width: 1300px;
+	margin-top: 175px;
+	margin-right: auto;
+	margin-left: auto;
+	background: RGBA(255,207,89,0.65);
+	/*border: 2px solid green;*/
+	box-shadow: 0px 10px 300px 0px black;
+	overflow: hidden;
 }
-.navBar_ContentMock {
+.content {
+	height: 100%;
+	width: 100%;
+	float: left;
+}
+#1 {
+	background: ;
+}
+#2 {
+	background: ;
+}
+#3 {
+	background: ;
+}
+#4 {
+	background: ;
+}
+#5 {
+	background: ;
+}
+/*.navBar_ContentMock {
 	font-family: Lato; 
 	display: inline-block;
 	margin-right: 125px;
@@ -59,4 +98,4 @@
 .navBarMock {
 	margin-top: 0px;
 	margin-bottom: 0px;
-}
+}*/
