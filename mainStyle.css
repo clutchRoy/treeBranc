@@ -1,6 +1,6 @@
 body {
 	/*background: lightgreen;*/
-	background: orange;
+	background: rgb(173, 159, 133);
 }
 #siteLogo {
 	font-size: 2.25em;
@@ -8,8 +8,9 @@ body {
 	color: -webkit-linear-gradient(black, yellow);
 	color: linear-gradient(black, yellow);
 }
-a {
+a.nonLogo-Navbar_Content {
 	text-decoration: none;
+	color: black;
 }
 .navBar_Content {
 	font-family: Lato;
@@ -29,19 +30,19 @@ a {
 .navBar {
 	position: fixed;
 	top: 0;
-	background: RGBA(255,255,255,0.75);
+	background: rgba(215,215,215,1.0);
 	width: 100%;
 	left: 0;
 }
 #contentSlider {
 	height: 450px;
-	width: 1300px;
+	width: 80%;
 	margin-top: 175px;
 	margin-right: auto;
 	margin-left: auto;
-	background: RGBA(255,207,89,0.65);
+	background: rgba(16, 16, 14, 0.65);
 	/*border: 2px solid green;*/
-	box-shadow: 0px 10px 300px 0px black;
+	box-shadow: 0px 30px 300px 0px black;
 	overflow: hidden;
 }
 .content {
@@ -63,7 +64,7 @@ a {
 }
 #5 {
 	background: ;
-}
+}s
 /*.navBar_ContentMock {
 	font-family: Lato; 
 	display: inline-block;
@@ -103,3 +104,132 @@ a {
 }
 The commented code above refers to the building of a navigation bar that scrolls down with the page; it would do so using the jQuery slideToggle() method
 */
+/*#arrow {
+	font-family: Arrow Font;
+	color: white;
+	font-weight: 200;
+}
+/*The commented code in this block starting at line 106 marks a font I was considering for the '>>>' part of the Continue button...sort of to make
+the arrow look cooler. It seems, though, as if the Advent Pro font is doing just fine with its sleek 200 font-weight.
+*/
+@font-face {
+	src: url('Ziggy.ttf');
+	font-family: Arrow Font;
+}
+#userPrompt {
+	text-align: center;
+	margin: auto;
+	font-family: Advent Pro;
+	color: white;
+	font-weight: 200;
+	font-size: 3em;
+	cursor: default;
+	width: 255px;
+	padding: 10px;
+	transition-property: color, background-color, border;
+	transition-duration: 0.5s;
+	-webkit-transition-property: color, background-color, border;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: color, background-color, border;
+	-moz-transition-duration: 0.5s;
+	-o-transition-property: color, background-color, border;
+	-o-transition-duration: 0.5s;
+	margin-top: 0px;
+}
+#userPrompt:hover {
+	/*color: black;*/
+	color: rgba(255,255,255,0.65);
+	/*background-color: rgba(255,207,89,0.65);*/
+}
+/*#promptOverlay {
+	height: 75px;
+	margin-top: -152px;
+	width: 100%;
+	background: rgba(255,207,89,0.65);
+	opacity: 0;
+	transition-property: margin-top, opacity;
+	transition-duration: 0.5s;
+	-webkit-transition-property: margin-top, opacity;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: margin-top, opacity;
+	-moz-transition-duration: 0.5s;
+	-o-transition-property: margin-top, opacity;
+	-o-transition-duration: 0.5s;
+}
+#userPrompt:hover > #promptOverlay {
+	opacity: 1.0;
+	margin-top: -77px;
+}
+Not using prompt overlay...
+*/
+#Continue {
+	opacity: 0;
+}
+#optionsBar {
+	box-shadow: 0px 0px 300px 0px black;
+	width: 45%;
+	margin-right: auto;
+	margin-left: auto;
+	height: 500px;
+	background: rgba(16,16,14,0.65);
+	margin-top: 150px;
+	cursor: default;
+}
+#copy {
+	font-family: Lato;
+	color: rgba(0,0,0,0.65);
+	margin-top: 255px;
+}
+#returner {
+	height: 350px;
+	width: 50%;
+	/*background-color: blue; /*Testing*/
+	padding-top: 5px;
+}
+#newUser {
+	height: 350px;
+	width: 50%;
+	margin-top: -355px;
+	/*background-color: red; /*Testing*/
+	margin-left: 50%;
+	padding-top: 5px;
+}
+#quick {
+	height: 150px;
+	opacity: 0;
+	padding-top: 5px;
+	width: 100%;
+	background: rgb(215,215,215);
+	margin-top: -20px;
+	padding-bottom: 15px;
+/*	-webkit-transition-property: opacity;
+	-webkit-transition-delay: 0.5s;
+	-webkit-transition-duration: 0.5s;Testing*/
+}
+#imagine{
+	/*background: orange;/*Testing*/
+	height: 0px;
+	width: 50%;
+	margin-top: -355px;
+	border-right: 2px dashed white;
+/*	-webkit-transition: height 0.5s;Testing*/
+}
+/*#optionsBar:hover > #imagine{
+	height: 350px;
+}
+#optionsBar:hover > #quick {
+	opacity: 1.0;
+}Testing Code*/
+.options {
+	font-family: Lato;
+}
+.optionsVertical {
+	color: white;
+}
+.heading {
+	text-align: center;
+	opacity: 0;
+}
+.optionsHorizontal > .heading {
+	margin-top: 35px;
+}
