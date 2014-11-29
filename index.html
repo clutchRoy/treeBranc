@@ -1,20 +1,22 @@
+<!--This appication, including its Android and iOS counterparts, are to be released out onto the market by June of 2015-->
 <!DOCTYPE html>
 <html>
 <head>
-<title>ShowCase: The Online Presentation Tool</title>
+<title>ShowCase: The Online Presentation Tool in 5 Minutes</title>
 <link type="text/css" rel="stylesheet" href="mainStyle.css"/>
 <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'/>
-<script src="ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
-<script src-"script.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Advent+Pro:100,300,400,700' rel='stylesheet' type='text/css'/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="script.js" type="text/javascript"></script>
 </head>
 <body>
 	<div class="navBar">
 		<li class="navBar_Content">
 			<h3 id="siteLogo">ShowCase</h3>
 		</li>
-		<a href="index.html"><li class="navBar_Content nonLogo-Navbar_Content">Home</li></a>
+		<a class="nonLogo-Navbar_Content" href="index.html"><li class="navBar_Content">Home</li></a>
 		<li class="navBar_Content nonLogo-Navbar_Content">Templates</li>
-		<li class="navBar_Content nonLogo-Navbar_Content">Help Out</li>
+		<li class="navBar_Content nonLogo-Navbar_Content">Contact Us</li>
 	</div>
 
 
@@ -30,8 +32,7 @@
 		even worse, it could be my own on adobe aftereffects; but this will have to be halted, as first the initial functionality of the application must be planned and created in the app.js javascript file. The functionality for this homepage will be brought to the user by script.js
 		-->
 	</div>
-
-	<h3>
+	<h3 id="userPrompt"><span style="opacity: 0;">></span> <span style="opacity: 0;">></span> <span style="opacity: 0;">></span> <span id="Continue">Continue</span></h3>
 
 	
 	<!--In today's session, on the 24th of November, 2014, we shall work on this section of the application, which is to design a mock navigation bar when 
@@ -50,6 +51,24 @@
 		</ul>		
 	</div>Don't need it...-->
 
+	<div id="optionsBar">
+		<div class="optionsVertical options" id="returner">
+				<h3 class="heading">Returning User</h3>
+				<p class="optionDescription"></p>
 
+		</div>
+		<div class="optionsVertical options" id="newUser">
+				<h3 class="heading">New User</h3>
+				<p class="optionDescription"></p>
+
+		</div>
+		<div id="imagine"></div>
+		<div class="optionsHorizontal options" id="quick">
+				<h3 class="heading">Just Make Me a Presentation</h3>
+				<p class="optionDescription"></p>
+		</div>
+	</div>
+
+	<p id="copy">Copyright dstags241 2013-2014</p>
 </body>
 </html>	
