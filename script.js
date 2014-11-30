@@ -18,6 +18,7 @@ $(document).ready(function(){
 	*/
 
 	$('#userPrompt').click(function(){
+		$(this).fadeTo(850,0);
 		//Scroll Down
 		var height = $("#navBar").css('height');
 		$('html , body').animate({
@@ -35,8 +36,53 @@ $(document).ready(function(){
 		//Time to make options visible...
 		$('.heading').delay(2000).fadeTo(300, 1);
 
-		//Hover animations to be added soon: 
-		//.optionsVertical buttons are hovered to yield .optionsHorizontal color schemes
-		//.optionsHorizontal buttons are hovered to yield .optionsVertical color schemes
 	});	
+
+	//With options now created, we can create some functionality to those options, making the user's experience both meaningful and aesthetically pleasing.
+	
+	$('#returner, #imagine').click(function(){
+		//alert("Log into account"); Test
+		$('.heading').fadeTo(850, 0);
+		$('#quick').fadeOut();
+		$('#imagine').delay(250).animate({
+			height: '0px'
+		});
+		$('#optionsBar').delay(1400).css("background-color", "rgb(215,215,215)");
+
+		$('#optionsBar');
+
+	});
+	/*$('#newUser').one("click", function(){
+		//alert("Make account"); Test
+		$('#optionsBar>div').fadeOut(850);
+		$('#optionsBar').delay(1400).css("background-color", "rgb(215,215,215)");
+
+		var welcomeHeader = '<h3 margin-top="20px" class="heading">Welcome to ShowCase. Please Log In Below...</h3>';
+		var inputTypeOne = '<input type="text/plain">keep'
+		//$('h3').delay(1900).html("Welcome to ShowCase. Please Log In Below...").appendTo("#optionsBar");
+
+		$(welcomeHeader).hide().delay(2000).appendTo('#optionsBar').fadeIn(100);
+		
+		var styles = {
+			fontFamily: 'Lato',
+			color: 'rgba(16,16,14,0.65)',
+			paddingTop: '10px',
+		};
+
+//		$(welcomeHeader).css(headerStyle);
+
+		$('#optionsBar').css(styles);
+	});//End of Account Creation Process...*/
+
+
+	$('#quick').click(function(){
+		//alert("I just don't care."); Test
+		$('.heading').fadeTo(850, 0);
+		$('#quick').fadeOut();
+		$('#imagine').delay(250).animate({
+			height: '0px'
+		});
+		$('#optionsBar').delay(1400).css("background-color", "rgb(215,215,215)");	
+	});
+
 });
