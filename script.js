@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 		//Create Options on Options Bar div, first by making a dividing line
 		$('#imagine').delay(1250).animate({
-			height: '355px'
+			height: '330px'
 		});
 
 		//Create Third option by making it now visible...
