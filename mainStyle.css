@@ -206,10 +206,10 @@ Not using prompt overlay...
 	height: 150px;
 	opacity: 0;
 	padding-top: 5px;
+	margin-top: -5px;
 	width: 100%;
 	background: rgb(215,215,215);
-	margin-top: -20px;
-	padding-bottom: 15px;
+	padding-bottom: 20px;
 /*	-webkit-transition-property: opacity;
 	-webkit-transition-delay: 0.5s;
 	-webkit-transition-duration: 0.5s;Testing*/
