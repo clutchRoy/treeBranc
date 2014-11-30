@@ -1,0 +1,28 @@
+.accountCreate {
+	background: ;
+	width: 50%;
+	border: none;
+	font-size: 1.5em;
+	color: rgba(16,16,14,0.65);
+}
+#password {
+	margin-left: 39px;
+}
+.logCreate {
+	display: inline-block;
+	font-family: Lato;
+	font-size: 1.5em;
+}
+#email {
+	margin-left: 70px;
+}
+#submit {
+	border-radius: 15%;
+	background: rgba(16,16,14,0.65);
+	color: rgb(215,215,215);
+	font-family: Lato;
+	border: none;
+	margin-bottom: -250px;
+	float: right;
+	font-size: 1.5em;
+}
