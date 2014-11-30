@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<div style="height:200px; width:  1000px; background: red;" class="legit" id="optionsBar">
+	</div>
+	<script>
+		$('#optionsBar').one("click", function(){
+		var welcomeHeader = '<h3 class="heading">Welcome to ShowCase. Please Log In Below...</h3>';
+		
+		//$('h3').delay(1900).html("Welcome to ShowCase. Please Log In Below...").appendTo("#optionsBar");
+
+		$(welcomeHeader).hide().appendTo('#optionsBar').fadeIn();
+
+		});
+	</script>
+</body>
+</html>
