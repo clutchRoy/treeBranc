@@ -1,0 +1,12 @@
+.logTxtLog > #password {
+	margin-left: 47.5px;
+}
+.accountLog {
+	width: 50%;
+	border: none;
+	font-size: 1.5em;
+	color: rgba(16,16,14,0.65);
+}
+h3 #username {
+	margin-left: 83.5px;
+}
