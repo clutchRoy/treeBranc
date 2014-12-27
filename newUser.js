@@ -35,7 +35,6 @@ $(document).ready(function(){
       	}
 
 		$('#optionsBar').css(styles);
-
 		/*var inputOneTrue = ((inputTypeOne!=null)&&(inputTypeOne!=""));
 		var inputTwoTrue = ((inputTypeTwo!=null)&&(inputTypeTwo!=""));
 		var inputThreeTrue = ((inputTypeThree!=null)&&(inputTypeThree!=""));
@@ -50,13 +49,63 @@ $(document).ready(function(){
 
 		//Process of returning to the prior user navigation...
 		$('#back').click(function(){
-			alert("Button clicked"); //Test...
+	//		alert("Button clicked"); //Test...
+
+
+	/*Wow, a lot of work has been completed today in order to create an experience for the user...who can now loggin successfully into the app and create 
+	his or her account with no trouble, and errors also return...
+	I apologize for the slow progress due to NBA 2K13 but now the app is my only priority...
+	This will be a graphic function, 
+	$('#back').click({
+		<graphically changing the board and changing it to the contents prior to clicking "new user...">
+	});*/
+
+			clearBoard('#optionsBar');
+			$('#userPrompt>span:nth-child(1)').delay(350).fadeTo(450,1.0);
+			$('#userPrompt>span:nth-child(2)').delay(450).fadeTo(450,1.0);
+			$('#userPrompt>span:nth-child(3)').delay(550).fadeTo(450,1.0); //this div represents the  bottom option, or the 'quick presentation div'
+		
+		/*$('#userPrompt').click(function(){
+			$('#promptOverlay').fadeTo(850,0.0);
+			$(this).delay(850).animate({marginLeft: '900px'}, 850)
+			$(this).delay(100).fadeOut(850);
 		});
+			The "#promptOverlay" div is not longer in use, and as a result, we do not need to use this line of code...
+			Let's keep things....simpler...
+		*/
+			function backToMenu(delay) {
+				window.setTimeout('alert("This function is working...")', delay); //Test...
+				styles = {
+					fontFamily: 'Lato',
+					background: 'rgba(16,16,14,0.65)',
+					paddingTop: '0px',
+					paddingLeft: '0px',
+					paddingRight: '0px',
+				};
 
 
 
+				$('#optionsBar').delay(delay).css(styles);
 
+				alert("Hello"); //Test...
 
+				//Create Options on Options Bar div, first by making a dividing line
+				$('#imagine').delay(1250).animate({
+					height: '330px'
+				});
+
+				//Create Third option by making it now visible...
+				$('#quick').delay(1850).fadeTo(300, 1);
+
+				//Time to make options visible...
+				$('.heading').delay(2000).fadeTo(300, 1);
+			}
+
+			backToMenu(3000);
+
+		});
+ 
+ 
 		//The code below has to do with actually creating the account for the person....using Firebase...*/
 
 
@@ -65,43 +114,40 @@ $(document).ready(function(){
 
 		//Process begins with click
 		$('#submit').click(function(){
-			alert("Creating account..."); //Test 
-
-			//Start off by referring to our Firebase. 
-			var ref = new Firebase('https://caseshow.firebaseio.com/');
+			//alert("Creating account..."); //Test 
 			
 			//These objects prompt users for the account creation process...
 			var next = '<input class="post_message" id=""></input>';
 			var wrong = '<h3 class="postMessage" id="confirm">Oops! Something went wrong! Try again!</h3>'; //Error message
+			var confirmation = '<h3 id="confirm" class="postMessage">Your account has been created successfully.</h3>'; //Establishment of post message
 			var i = 0;
+
+			$(wrong).hide().appendTo('#optionsBar');
 			//Create user account
 			ref.createUser({
 				email: $('#email').val(),
 				password: $('#password').val()
 			}, function(error) {
 				if(error===null) {
+					$(wrong).fadeOut();					
+/*					alert("Account created successfully...");
 					console.log("User account created successfully.");
-					var confirmation = '<h3 id="confirm" class="postMessage">Your account has been created successfully.</h3>'; //Creation of post message
-					$(confirmation).hide().appendTo('#optionsBar').fadeIn(); //Confirmation message created...
+					$(confirmation).hide().appendTo('#optionsBar').fadeIn(); //Confirmation message created...*/
 
-					$(next).hide().appendTo('#optionsBar').fadeIn().delay(500).animate({
-						marginLeft : '0px'
-					}).delay(500).fadeTo(850,1.0); //Prompts user to continue onward...
+//					$(next).hide().appendTo('#optionsBar').fadeIn();
 
-					$(wrong).hide();
+					console.log("User account created successfully");
 
-					if(i==1) {
-						$(wrong).fadeOut();
-						$(next).hide().appendTo('#optionsBar').fadeIn();
-						i = 0;
-					}
-				} else {
+
+					$(confirmation).hide().appendTo('#optionsBar').fadeIn();
+
+					clearBoard('#optionsBar');
+				} 
+
+				if(error) {
 						console.log("Error creating user: ", error);
-						if(i == 0) {
-							$(wrong).hide().appendTo('#optionsBar').fadeIn();
-							alert(i);
-							i++;
-						}
+						//$(wrong).fadeIn();
+						alert("Problem creating user account...try again...");
 				}
 
 			});
@@ -113,10 +159,11 @@ $(document).ready(function(){
 			}, function(error, authData) {
 
 				if(error) {
-					alert("You have not been successfully logged in...", error);
+					//alert("You have not been successfully logged in...", error);
 					console.log("User not logged in successfully...", error);
 				} else {
-					alert("User has been successfully logged in: ", authData);
+					//alert("User has been successfully logged in: ", authData);
+					console.log("User has been successfully logged in", autData);
 				}
 
 			});
@@ -163,10 +210,6 @@ $(document).ready(function(){
 
 
 		});*/
-
-		$('#continue_Onwards').click(function(){
-			alert("Button clicked..."); //Test
-		});
 
 
 		});//End of one click process

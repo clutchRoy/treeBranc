@@ -174,11 +174,11 @@ Not using prompt overlay...
 	background: rgba(16,16,14,0.65);
 	margin-top: 150px;
 	cursor: default;
-	transition: background-color 0.5s;
-	-webkit-transition: background-color 0.5s;
-	-moz-transition: background-color 0.5s;
-	-o-transition: background-color 0.5s;
-	overflow: hidden;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+/*	overflow: hidden;*/
 }
 #optionsBar > .heading {
 	color: rgb(16,16,14,0.65);
