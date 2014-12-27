@@ -5,8 +5,8 @@ $(document).ready(function(){
 	$(document).ready(function(){
 		$('#userPrompt>span:nth-child(1)').delay(350).fadeTo(450,1.0);
 		$('#userPrompt>span:nth-child(2)').delay(450).fadeTo(450,1.0);
-		$('#userPrompt>span:nth-child(3)').delay(550).fadeTo(450,1.0);
-		$('#Continue').delay(700).fadeTo(850,1.0);
+		$('#userPrompt>span:nth-child(3)').delay(550).fadeTo(450,1.0); //this div represents the  bottom option, or the 'quick presentation div'
+		$('#Continue').delay(700).fadeTo(850,1.0); //Continue button
 	});
 	/*$('#userPrompt').click(function(){
 		$('#promptOverlay').fadeTo(850,0.0);
@@ -17,7 +17,7 @@ $(document).ready(function(){
 		Let's keep things....simpler...
 	*/
 
-	$('#userPrompt').click(function(){
+	$('#userPrompt').one("click",function(){
 		$(this).fadeTo(850,0);
 		//Scroll Down
 		var height = $("#navBar").css('height');
@@ -40,7 +40,7 @@ $(document).ready(function(){
 
 	//With options now created, we can create some functionality to those options, making the user's experience both meaningful and aesthetically pleasing.
 	
-	$('#returner, #imagine').click(function(){
+	/*$('#returner, #imagine').click(function(){
 		//alert("Log into account"); Test
 		$('.heading').fadeTo(850, 0);
 		$('#quick').fadeOut();
@@ -51,7 +51,7 @@ $(document).ready(function(){
 
 		$('#optionsBar');
 
-	});
+	});*/
 	/*$('#newUser').one("click", function(){
 		//alert("Make account"); Test
 		$('#optionsBar>div').fadeOut(850);
@@ -72,7 +72,7 @@ $(document).ready(function(){
 //		$(welcomeHeader).css(headerStyle);
 
 		$('#optionsBar').css(styles);
-	});//End of Account Creation Process...*/
+	});//End of Account Creation Process...*
 
 
 	$('#quick').click(function(){
@@ -83,6 +83,6 @@ $(document).ready(function(){
 			height: '0px'
 		});
 		$('#optionsBar').delay(1400).css("background-color", "rgb(215,215,215)");	
-	});
+	});*/
 
 });
