@@ -17,12 +17,68 @@
 	margin-left: 70px;
 }
 #submit {
-	border-radius: 15%;
-	background: rgba(16,16,14,0.65);
-	color: rgb(215,215,215);
-	font-family: Lato;
-	border: none;
 	margin-bottom: -250px;
 	float: right;
+	margin-right: 25px;
+}
+.buttons {
+	/*border-radius: 15%;Looks dorky with */
+	background: transparent;
+	color: rgb(215,215,215);
+	font-family: Lato;
+	border: 2px solid rgba(16,16,14,0.65);
 	font-size: 1.5em;
+	-webkit-text-stroke-color: rgba(16,16,14,0.65);
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: rgba(16,16,14,0.65);
+	border-radius: 28px;
+	-webkit-transition-property: -webkit-text-fill-color, -webkit-text-stroke-width, background, border;
+	-webkit-transition-duration: 0.35s;
+	-o-transition-property: -webkit-text-fill-color, -webkit-text-stroke-width, background, border;
+	-o-transition-duration: 0.35s;
+	-moz-transition-property: -webkit-text-fill-color, -webkit-text-stroke-width, background, border;
+	-moz-transition-duration: 0.35s;
+	transition-property: -webkit-text-fill-color, -webkit-text-stroke-width, background, border;
+	transition-duration: 0.35s;
+	margin-top: 50px;
+}
+#back {
+/*	margin-top: 250px;*/
+	float: left;
+	margin-left: 25px;
+
+}
+.buttons:hover {
+	background: rgba(16,16,14,0.65);
+	-webkit-text-fill-color: rgb(215,215,215);
+	-webkit-text-stroke-width: 0px;
+	border: 2px solid transparent;
+}
+.postMessage {
+	font-family: Lato;
+	color: rgba(16,16,14,0.65);
+	font-size: 1.5em;
+	margin-top: 250px;
+	text-align: center;
+}
+#continue_Onwards {
+	opacity: 0;
+	margin: auto;
+	line-height: 150px;
+	padding: 25px;
+	background: rgb(215,215,215);
+/*	border-radius: 28px;*/
+	border: 12.5px inset rgba(16,16,14,0.65);
+	transition-property: color, background;
+	transition-duration: 0.5s;
+	-webkit-transition-property: color, background;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-property: color, background;
+	-moz-transition-duration: 0.5s;
+	-o-transition-property: color, background;
+	-o-transition-duration: 0.5s;
+}
+#continue_Onwards:hover {
+	color: rgb(215,215,215);
+	background: rgba(16,16,14,0.65);
 }
