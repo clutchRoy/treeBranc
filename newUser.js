@@ -10,8 +10,9 @@ $(document).ready(function(){
 		var inputTypeOne = '<h3 class="logTxt">Choose a Username <input class="accountCreate" id="username" name="username" type="text/plain"></input></h3>';
 		var inputTypeTwo = '<h3 class="logTxt">Enter Password<input class="accountCreate" name="password" id="password" name="password" class="input_text" type="password"/></h3>';
 		var inputTypeThree = '<h3 class="logTxt">Enter Email <input id="email" name="email" class="accountCreate" type="text/plain"></input></h3>';		
-		var submitButton = '<input type="submit" value="Sign Up" id="submit" name="submit">';
+		var submitButton = '<input type="submit" class="buttons" value="Sign Up" id="submit" name="submit">';
 		//$('h3').delay(1900).html("Welcome to ShowCase. Please Log In Below...").appendTo("#optionsBar");
+		var backButton = '<input type="submit" value="Go Back" class="buttons" id="back" name="Go Back">';
 
 		$(welcomeHeader).hide().delay(2000).appendTo('#optionsBar').fadeIn(100);
 //		$(inputTypeOne).hide().delay(2000).appendTo('#optionsBar').fadeIn(100);
@@ -43,7 +44,20 @@ $(document).ready(function(){
 			$(submitButton).hide().delay(2000).appendTo('#optionsBar').fadeIn();
 		}*/
 		$(submitButton).hide().delay(2000).appendTo('#optionsBar').fadeIn();
-		//The code below has to do with actually creating the account for the person....using Firebase...
+
+		$(backButton).hide().delay(2000).appendTo('#optionsBar').fadeIn(); /*Creation of the back button has been completed...functionality is now to be
+		added to it...*/
+
+		//Process of returning to the prior user navigation...
+		$('#back').click(function(){
+			alert("Button clicked"); //Test...
+		});
+
+
+
+
+
+		//The code below has to do with actually creating the account for the person....using Firebase...*/
 
 
 		//Creating a firebase reference...
@@ -57,9 +71,9 @@ $(document).ready(function(){
 			var ref = new Firebase('https://caseshow.firebaseio.com/');
 			
 			//These objects prompt users for the account creation process...
-			var next = '<h3 id="continue_Onwards" class="postMessage">Go on and create your first presentation!</h3>'; //Creation of post message
+			var next = '<input class="post_message" id=""></input>';
 			var wrong = '<h3 class="postMessage" id="confirm">Oops! Something went wrong! Try again!</h3>'; //Error message
-
+			var i = 0;
 			//Create user account
 			ref.createUser({
 				email: $('#email').val(),
@@ -75,9 +89,19 @@ $(document).ready(function(){
 					}).delay(500).fadeTo(850,1.0); //Prompts user to continue onward...
 
 					$(wrong).hide();
+
+					if(i==1) {
+						$(wrong).fadeOut();
+						$(next).hide().appendTo('#optionsBar').fadeIn();
+						i = 0;
+					}
 				} else {
-					console.log("Error creating user: ", error);
-					$(wrong).hide().appendTo('#optionsBar').fadeIn(); //Creation of object returning an error...
+						console.log("Error creating user: ", error);
+						if(i == 0) {
+							$(wrong).hide().appendTo('#optionsBar').fadeIn();
+							alert(i);
+							i++;
+						}
 				}
 
 			});
@@ -129,6 +153,21 @@ $(document).ready(function(){
 
 		$(next).delay(500).fadeTo(850,1.0);
 		//As it appears, it slides into its normal position.*/
+/*		var opacity = document.getElementById("continue_Onwards").style.opacity;
+		if(opacity == 1) {
+			alert("Prompt user forward"); //Test
+		}		
+
+		$('#continue_Onwards').click(function(){
+			alert("Button clicked...");
+
+
+		});*/
+
+		$('#continue_Onwards').click(function(){
+			alert("Button clicked..."); //Test
+		});
+
 
 		});//End of one click process
 
