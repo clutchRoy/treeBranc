@@ -38,23 +38,27 @@ $(document).ready(function(){
 		var welcomeHeader = '<h3 margin-top="20px" class="heading">Welcome to ShowCase. Please Log In Below...</h3>';
 		var inputTypeOne = '<h3 class="logTxt">Enter Email <input class="accountLog" id="username" name="username" type="text/plain"></input></h3>'; //Following margin error repaired...
 		var inputTypeTwo = '<h3 class="logTxt logTxtLog">Enter Password      <input class="accountLog" name="password" id="password" name="password" class="input_text" type="password"/></h3>';
-		var submitButton = '<input type="submit" value="Sign In" id="submit" name="submit">';
+		var submitButton = '<input type="submit" class="buttons" value="Sign In" id="submit" name="submit">';
+		var backButton = '<input type="submit" value="Go Back" class="buttons" id="back" name="Go Back">';
 
 		$(welcomeHeader).hide().delay(2000).appendTo('#optionsBar').fadeIn(100);
 		$(inputTypeOne).hide().delay(2000).appendTo('#optionsBar').fadeIn(100);
 		$(inputTypeTwo).hide().delay(2000).appendTo('#optionsBar').fadeIn(100);
 		$(submitButton).hide().delay(2000).appendTo('#optionsBar').fadeIn(100);
+		$(backButton).hide().delay(2000).appendTo('#optionsBar').fadeIn(100);
+
 		var styles = {
 			fontFamily: 'Lato',
-			color: 'rgba(16,16,14,0.65',
+			color: 'rgba(16,16,14,0.65)',
 			paddingTop: '10px',
 			paddingRight: '10px',
 			paddingLeft: '10px'
-		};
+		}; //Styles variable for the options bar, to be applied to it directly...
 
 		$('#optionsBar').css(styles); //Apply styles to options bar after effect commences.
 
 
+		allFadeOnButton('#back');
 		//The UI for this portion of the app has been created...
 		//Functionality is now to be added...
 
@@ -75,7 +79,9 @@ $(document).ready(function(){
 					console.log("Log in successful", authData);
 				}
 			});
-		});
+
+			clearBoard('#optionsBar'); //Clears away the canvas when 
+		}); //Logging account into the system...
 /*		$(submitButton).click(function(){
 			function authHandler(error, authData) {
 				if(error) {

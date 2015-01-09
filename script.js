@@ -36,7 +36,7 @@ $(document).ready(function(){
 		//Time to make options visible...
 		$('.heading').delay(2000).fadeTo(300, 1);
 
-	});	
+	});
 
 	//With options now created, we can create some functionality to those options, making the user's experience both meaningful and aesthetically pleasing.
 	
